@@ -14,9 +14,7 @@ pure software engineering exercise, but to show how a public policy question can
 be translated into an explainable, measurable, and communicable data product.
 
 > Note: the app interface is intentionally written in Spanish because the case is
-> framed around Chilean and Latin American public policy debates. The README is
-> written in English to make the project easier to evaluate in an international
-> portfolio context.
+> framed around Chilean and Latin American public policy debates.
 
 ## App Preview
 
