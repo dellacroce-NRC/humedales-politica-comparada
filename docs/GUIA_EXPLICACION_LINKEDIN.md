@@ -108,6 +108,16 @@ criterio político + ciencia de datos + IA agentica = prototipo explicable
 La IA no reemplaza el análisis político. Acelera la construcción técnica para
 que una idea pueda convertirse en una pieza pública, visual e interactiva.
 
+También se puede explicar como un proyecto de Vibe Coding con criterio
+analítico:
+
+> No lo presento como un proyecto donde lo central sea demostrar que soy
+> programador. Lo presento como una muestra de cómo uso inteligencia artificial
+> agentica para transformar una pregunta de política comparada en un prototipo
+> funcional, visual y testeable. Mi aporte está en formular la pregunta,
+> interpretar los trade-offs y dirigir la construcción técnica hacia una pieza
+> útil para comunicar análisis.
+
 ## Guion breve para presentarlo
 
 Este proyecto no busca decir dónde hay humedales reales. Es una simulación para
@@ -144,6 +154,8 @@ Este proyecto sirve para posicionar tres capacidades juntas:
 - Ciencia de datos aplicada para simular, medir y visualizar trade-offs.
 - Uso práctico de IA para acelerar prototipos explicables sin perder criterio
   experto.
+- Capacidad para dirigir herramientas técnicas desde una pregunta sustantiva,
+  aunque el foco profesional no sea ser programador de software.
 
 La conexión con producto debe aparecer como cierre, no como tema principal. Una
 buena formulación sería:

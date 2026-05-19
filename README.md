@@ -14,6 +14,19 @@ política, ciencia de datos e inteligencia artificial aplicada. El foco no está
 solo en programar una app, sino en traducir un problema de política pública a una
 simulación explicable, medible y comunicable.
 
+## Vista rápida de la app
+
+La aplicación permite modificar el criterio legal simulado, el número de terrenos
+y el nivel de error en los datos de terreno. La idea no es mostrar un dashboard
+decorativo, sino hacer visible cómo cambia el error institucional cuando cambia
+la regla.
+
+![Vista general de la simulación](docs/assets/app-overview.png)
+
+![Comparación de reglas legales simuladas](docs/assets/app-comparacion-reglas.png)
+
+![Sensibilidad al ruido en datos de terreno](docs/assets/app-ruido-datos.png)
+
 ## Idea central
 
 Una legislación ambiental puede funcionar como un algoritmo social. Recibe datos
@@ -140,6 +153,26 @@ El punto no es delegar pensamiento experto a la IA. El punto es usar IA aplicada
 para convertir una pregunta institucional en un prototipo explicable, testeable y
 publicable.
 
+## Cómo se construyó: Vibe Coding con criterio analítico
+
+Este proyecto también documenta una forma de trabajo: usar herramientas de IA
+agentica para convertir una intuición analítica en una aplicación funcional. No
+está planteado como una demostración de programación tradicional, sino como un
+ejercicio de dirección técnica asistida por IA.
+
+El proceso combinó:
+
+- Pregunta sustantiva desde ciencia política comparada.
+- Traducción del problema a reglas, datos sintéticos y matriz de confusión.
+- Iteración con Codex para estructurar código, visualizaciones, pruebas y textos.
+- Revisión humana del encuadre, los supuestos, el relato y la interpretación.
+
+Ese flujo es parte del valor del proyecto: muestra cómo una persona con perfil
+analítico puede usar IA para producir artefactos técnicos publicables sin
+presentarse como programador de software, sino como alguien capaz de dirigir
+herramientas de datos e inteligencia artificial hacia una pregunta de política
+pública, comportamiento y toma de decisiones.
+
 ## Estructura del proyecto
 
 ```text
@@ -166,7 +199,12 @@ Humedales_Politica_Comparada/
 
 ## Ejecutar localmente
 
+Una persona que quiera probar el proyecto puede clonarlo, instalar dependencias
+y ejecutar la app en su navegador:
+
 ```powershell
+git clone https://github.com/dellacroce-NRC/humedales-politica-comparada.git
+cd humedales-politica-comparada
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
