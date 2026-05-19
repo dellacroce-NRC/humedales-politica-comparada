@@ -1,179 +1,165 @@
-# Humedales urbanos como algoritmos sociales
+# Urban Wetlands as Social Algorithms
 
-Simulación interactiva en Python + Streamlit sobre política comparada, datos
-imperfectos y toma de decisiones públicas.
+Interactive Streamlit simulation about comparative public policy, imperfect
+data, and institutional decision-making.
 
-Este proyecto muestra cómo una ley puede leerse como un clasificador: observa
-señales, aplica una regla y produce una decisión. No busca determinar dónde hay
-humedales reales ni reemplazar análisis jurídico experto. Su objetivo es hacer
-visible un dilema institucional: ninguna regla es perfecta; toda regla distribuye
-errores.
+This project treats a legal rule as a classifier: it observes signals, applies a
+decision rule, and produces a public outcome. It does not attempt to identify
+real wetlands or replace legal/environmental expertise. Its purpose is to make a
+policy design problem visible: no rule is perfect; every rule distributes errors.
 
-La pieza fue diseñada como parte de un portafolio profesional que conecta ciencia
-política, ciencia de datos e inteligencia artificial aplicada. El foco no está
-solo en programar una app, sino en traducir un problema de política pública a una
-simulación explicable, medible y comunicable.
+The project is part of a professional portfolio focused on political science,
+data science, behavioral analysis, and applied AI. The goal is not to present a
+pure software engineering exercise, but to show how a public policy question can
+be translated into an explainable, measurable, and communicable data product.
 
-## Vista rápida de la app
+> Note: the app interface is intentionally written in Spanish because the case is
+> framed around Chilean and Latin American public policy debates. The README is
+> written in English to make the project easier to evaluate in an international
+> portfolio context.
 
-La aplicación permite modificar el criterio legal simulado, el número de terrenos
-y el nivel de error en los datos de terreno. La idea no es mostrar un dashboard
-decorativo, sino hacer visible cómo cambia el error institucional cuando cambia
-la regla.
+## App Preview
 
-![Vista general de la simulación](docs/assets/app-overview.png)
+The app lets users change the simulated legal criterion, the number of synthetic
+land parcels, and the level of error in field data. The point is not to build a
+decorative dashboard, but to show how institutional error changes when the rule
+changes.
 
-![Comparación de reglas legales simuladas](docs/assets/app-comparacion-reglas.png)
+![Simulation overview](docs/assets/app-overview.png)
 
-![Sensibilidad al ruido en datos de terreno](docs/assets/app-ruido-datos.png)
+![Comparison of simulated legal rules](docs/assets/app-comparacion-reglas.png)
 
-## Idea central
+![Sensitivity to field-data noise](docs/assets/app-ruido-datos.png)
 
-Una legislación ambiental puede funcionar como un algoritmo social. Recibe datos
-de terreno, aplica criterios y decide si un sitio queda protegido o no. El
-problema aparece cuando los datos son imperfectos: una regla amplia puede evitar
-daño ambiental irreversible, pero también puede amplificar errores técnicos y
-generar bloqueos injustificados.
+## Core Idea
 
-La pregunta del proyecto no es qué país tiene la regla "correcta". La pregunta
-es qué tipo de error acepta cada diseño institucional.
+Environmental legislation can be read as a social algorithm. It receives field
+data, applies criteria, and decides whether a site should be protected. The
+problem emerges when field data are imperfect: a broad rule can prevent
+irreversible environmental harm, but it can also amplify technical errors and
+create unjustified administrative blockages.
 
-## Tres reglas comparadas
+The question is not which country has the "correct" rule. The question is what
+type of error each institutional design is willing to tolerate.
 
-| Caso | Regla simulada | Sesgo institucional | Riesgo principal |
+## Three Comparative Rules
+
+| Case | Simulated rule | Institutional bias | Main risk |
 |---|---:|---|---|
-| Chile | 1 de 3 criterios | Alta sensibilidad / high recall | Falsos positivos: proteger de más |
-| EE.UU. | 3 de 3 criterios | Alta precisión jurídica | Falsos negativos: dejar humedales fuera |
-| Colombia | 2 de 3 criterios | Concurrencia intermedia | Balance imperfecto entre ambos errores |
+| Chile | 1 of 3 criteria | High sensitivity / high recall | False positives: over-protection |
+| United States | 3 of 3 criteria | High legal precision | False negatives: missed wetlands |
+| Colombia | 2 of 3 criteria | Intermediate concurrence | Imperfect balance between both errors |
 
-### Chile: lógica OR / 1 de 3
+### Chile: OR Logic / 1 of 3
 
-La regla amplia está diseñada para evitar a toda costa el daño ambiental
-irreversible. En lenguaje de clasificación, maximiza sensibilidad o recall:
-prefiere detectar casi todo antes que arriesgarse a dejar un humedal fuera.
+The broad rule is designed to avoid irreversible environmental harm. In
+classification language, it maximizes sensitivity or recall: it prefers to catch
+almost everything rather than risk leaving a wetland unprotected.
 
-El costo es que, si los datos técnicos o municipales tienen ruido, una sola señal
-errónea puede activar protección. En la práctica, eso puede traducirse en falsos
-positivos: sitios eriazos o terrenos sin valor ecosistémico bloqueados por error,
-con efectos sobre vivienda, inversión pública o gestión urbana.
+The cost is that, if technical or municipal data are noisy, a single erroneous
+signal can activate protection. In practice, this may create false positives:
+vacant or low-ecological-value sites blocked by mistake, with consequences for
+housing, public investment, and urban management.
 
-### EE.UU.: lógica AND / 3 de 3
+### United States: AND Logic / 3 of 3
 
-La regla estricta exige concurrencia completa de criterios. Su prioridad es la
-certeza jurídica y la protección de la propiedad privada: solo se protege cuando
-la evidencia observada es fuerte.
+The strict rule requires full concurrence of criteria. Its priority is legal
+certainty and private property protection: a site is protected only when the
+observed evidence is strong.
 
-El costo aparece por el lado contrario. Al exigir demasiada evidencia, puede
-dejar fuera ecosistemas intermitentes, estacionales o difíciles de observar. En
-términos de matriz de confusión, reduce falsos positivos, pero aumenta falsos
-negativos.
+The cost appears on the opposite side. By requiring too much evidence, the rule
+may leave intermittent, seasonal, or hard-to-observe ecosystems unprotected. In
+confusion-matrix terms, it reduces false positives but increases false
+negatives.
 
-### Colombia: lógica 2 de 3
+### Colombia: 2 of 3 Logic
 
-La regla intermedia busca una solución de concurrencia: no basta una señal
-aislada, pero tampoco se exige la presencia perfecta de todos los criterios. Es
-un intento de equilibrio institucional entre protección ambiental, certeza
-técnica y resiliencia frente a datos imperfectos.
+The intermediate rule seeks a concurrence-based solution: one isolated signal is
+not enough, but perfect evidence across all criteria is not required either. It
+tries to balance environmental protection, technical certainty, and institutional
+resilience under imperfect data.
 
-## El experimento: ruido en datos de terreno
+## The Experiment: Noise in Field Data
 
-La app permite modificar el nivel de "error en datos de terreno". Ese control es
-clave para el argumento del proyecto.
+The app includes a control called `Error en datos de terreno` ("field-data
+error"). This parameter is central to the argument.
 
-Cuando los datos observados tienen ruido, la regla amplia de Chile no solo se
-vuelve más sensible: puede amplificar el error de forma no lineal. Un problema
-de medición se convierte entonces en un problema de burocracia: la incertidumbre
-técnica termina produciendo arbitrariedad administrativa y parálisis de
-proyectos.
+When observed data contain noise, Chile's broad rule does not merely become more
+sensitive: it can amplify error in a non-linear way. A measurement problem then
+becomes a bureaucratic problem. Technical uncertainty turns into administrative
+arbitrariness and project paralysis.
 
-Esta es la hipótesis pedagógica más importante del proyecto: el diseño de reglas
-no puede evaluarse sin simular la calidad de los datos sobre los que esas reglas
-van a operar.
+This is the key pedagogical hypothesis of the project: institutional rules
+cannot be evaluated without simulating the quality of the data on which those
+rules operate.
 
-## Cómo leer las métricas
+## How To Read The Metrics
 
-| Métrica en la app | Equivalente técnico | Lectura de política pública |
+| App metric | Technical equivalent | Public policy interpretation |
 |---|---|---|
-| Acierto al proteger | Precision | De lo que el Estado protege, cuánto correspondía proteger |
-| Humedales detectados | Recall | De los humedales existentes, cuántos logra encontrar la regla |
-| Protege de más | Falsos positivos | Costos administrativos, urbanos o sociales por sobrerregulación |
-| Deja fuera humedales | Falsos negativos | Riesgo de daño ambiental no prevenido |
+| `Acierto al proteger` | Precision | Of what the State protects, how much actually deserved protection |
+| `Humedales detectados` | Recall | Of all simulated wetlands, how many the rule manages to detect |
+| `Protege de más` | False positives | Administrative, urban, or social costs of over-regulation |
+| `Deja fuera humedales` | False negatives | Risk of unprevented environmental damage |
 
-La matriz de confusión permite ver que una regla legal no solo produce
-decisiones correctas o incorrectas. Produce tipos distintos de error, y cada
-tipo de error tiene consecuencias políticas, sociales y territoriales.
+The confusion matrix makes the trade-off visible. A legal rule does not simply
+produce right or wrong decisions. It produces different types of error, and each
+type of error has political, social, and territorial consequences.
 
-## Coda: de política pública a producto digital
+## From Public Policy To Product Thinking
 
-El proyecto no es un caso de product analytics. Su núcleo es la política
-comparada. Pero la lógica de precision/recall permite una lectura transferible
-al diseño de productos digitales, especialmente para equipos que toman
-decisiones automatizadas sobre comportamiento humano.
+This is not a product analytics project. Its core is comparative public policy.
+However, the precision/recall logic transfers naturally to digital product
+design, especially when teams make automated decisions about human behavior.
 
-Sistemas de prevención de fraude, paywalls, moderación, scoring de riesgo o
-reglas de negocio también clasifican comportamientos con datos imperfectos.
+Fraud prevention systems, paywalls, moderation tools, risk scoring, and business
+rules also classify behavior under imperfect data. If tracking data are noisy and
+a rule is too aggressive, false positives may block legitimate users, destroy
+trust, or increase churn. Analytically, this is similar to a poorly calibrated
+law that treats non-risk cases as risk and blocks legitimate urban projects.
 
-Si los datos de tracking tienen ruido y una regla es demasiado agresiva, los
-falsos positivos pueden bloquear usuarios legítimos, destruir confianza o
-empujar abandono. Es el equivalente analítico de una ley mal calibrada que
-asfixia proyectos urbanos por tratar como riesgo casos que no lo eran.
+The connection does not change the topic of the project. It shows a broader
+professional capability: reasoning about rules, incentives, behavior, and error
+across both public institutions and digital products.
 
-La conexión no busca cambiar el tema del proyecto, sino mostrar una capacidad
-profesional más amplia: razonar reglas, incentivos, comportamiento y error tanto
-en instituciones públicas como en productos digitales. Para un equipo de
-producto, esa mirada importa porque muchas decisiones operativas también son
-clasificadores: quién pasa un filtro, quién recibe una fricción, quién queda
-bloqueado, quién accede a una experiencia y quién es tratado como riesgo.
+## What This Project Demonstrates
 
-Esa es la transferencia central: una formación en ciencia política puede aportar
-criterio para diseñar sistemas de decisión más conscientes de sus costos,
-sesgos, falsos positivos y efectos sobre personas reales.
+- Translating a political science problem into a reproducible data simulation.
+- Using classification metrics to explain public policy trade-offs.
+- Building an interactive app for executive, pedagogical, and portfolio use.
+- Connecting institutional design with product, behavioral, and decision-rule
+  thinking.
+- Communicating complex analysis to mixed audiences: public policy, data, AI,
+  product, and business.
+- Using Python, Streamlit, Plotly, automated tests, and documentation as a
+  lightweight analytical stack.
+- Applying agentic AI as a technical accelerator in a human-in-the-loop workflow.
 
-## Qué demuestra este proyecto
+## How It Was Built: Vibe Coding With Analytical Direction
 
-- Capacidad para traducir un problema de ciencia política a una simulación de
-  datos reproducible.
-- Uso de métricas de clasificación para explicar trade-offs de política pública.
-- Diseño de una app interactiva orientada a comunicación ejecutiva y pedagógica.
-- Capacidad para conectar dilemas institucionales con criterios transferibles a
-  producto, comportamiento y reglas de decisión.
-- Capacidad para comunicar análisis complejo a audiencias mixtas: política
-  pública, datos, IA, producto y negocio.
-- Integración de Python, Streamlit, Plotly, pruebas automatizadas y documentación.
-- Uso de IA agentica como apoyo de desarrollo en un flujo human-in-the-loop.
+This project also documents a way of working: using agentic AI tools to turn an
+analytical intuition into a functional application.
 
-## Rol de la inteligencia artificial
+It is not framed as a traditional software engineering showcase. Instead, it is
+an example of AI-assisted technical direction: defining the substantive question,
+translating it into rules and metrics, iterating with Codex on code and
+documentation, and keeping human judgment in charge of interpretation.
 
-OpenAI Codex fue usado como agente técnico para acelerar arquitectura,
-implementación, visualizaciones, pruebas y documentación. El criterio
-politológico, el encuadre comparado, la interpretación de resultados y el tono
-de la pieza fueron definidos humanamente.
+The workflow combined:
 
-El punto no es delegar pensamiento experto a la IA. El punto es usar IA aplicada
-para convertir una pregunta institucional en un prototipo explicable, testeable y
-publicable.
+- A substantive question from comparative political science.
+- Translation of the problem into synthetic data, legal rules, and a confusion
+  matrix.
+- Iteration with Codex to structure code, visualizations, tests, and written
+  explanation.
+- Human review of assumptions, framing, narrative, and interpretation.
 
-## Cómo se construyó: Vibe Coding con criterio analítico
+That workflow is part of the value of the project. It shows how an analytical
+profile can use AI to produce publishable technical artifacts without claiming to
+be a software engineer. The core skill is directing data and AI tools toward a
+meaningful public policy and behavioral decision-making question.
 
-Este proyecto también documenta una forma de trabajo: usar herramientas de IA
-agentica para convertir una intuición analítica en una aplicación funcional. No
-está planteado como una demostración de programación tradicional, sino como un
-ejercicio de dirección técnica asistida por IA.
-
-El proceso combinó:
-
-- Pregunta sustantiva desde ciencia política comparada.
-- Traducción del problema a reglas, datos sintéticos y matriz de confusión.
-- Iteración con Codex para estructurar código, visualizaciones, pruebas y textos.
-- Revisión humana del encuadre, los supuestos, el relato y la interpretación.
-
-Ese flujo es parte del valor del proyecto: muestra cómo una persona con perfil
-analítico puede usar IA para producir artefactos técnicos publicables sin
-presentarse como programador de software, sino como alguien capaz de dirigir
-herramientas de datos e inteligencia artificial hacia una pregunta de política
-pública, comportamiento y toma de decisiones.
-
-## Estructura del proyecto
+## Repository Structure
 
 ```text
 Humedales_Politica_Comparada/
@@ -184,8 +170,13 @@ Humedales_Politica_Comparada/
 |-- data/
 |   `-- synthetic_wetlands.csv
 |-- docs/
+|   |-- GUIA_DEMO_ENTREVISTA.md
 |   |-- GUIA_EXPLICACION_LINKEDIN.md
-|   `-- deploy_log.md
+|   |-- deploy_log.md
+|   `-- assets/
+|       |-- app-overview.png
+|       |-- app-comparacion-reglas.png
+|       `-- app-ruido-datos.png
 |-- notebooks/
 |   `-- 01_exploracion_conceptual.ipynb
 |-- src/
@@ -197,10 +188,10 @@ Humedales_Politica_Comparada/
     `-- test_policy_simulation.py
 ```
 
-## Ejecutar localmente
+## How To Run Locally
 
-Una persona que quiera probar el proyecto puede clonarlo, instalar dependencias
-y ejecutar la app en su navegador:
+Anyone who wants to test the project locally can clone the repository, install
+the dependencies, and launch the Streamlit app:
 
 ```powershell
 git clone https://github.com/dellacroce-NRC/humedales-politica-comparada.git
@@ -209,13 +200,13 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-Luego abrir:
+Then open:
 
 ```text
 http://localhost:8501
 ```
 
-## Ejecutar pruebas
+## Run Tests
 
 ```powershell
 python -m pip install -r requirements-dev.txt
@@ -223,16 +214,16 @@ $env:PYTHONDONTWRITEBYTECODE='1'
 python -m pytest tests -q -p no:cacheprovider
 ```
 
-## Limitaciones
+## Limitations
 
-- Dataset sintético, no evidencia geográfica real.
-- Reglas legales simplificadas con fines pedagógicos.
-- No es un clasificador científico, jurídico ni productivo.
-- La fidelidad normativa puede ampliarse con fuentes primarias y validación
-  experta.
+- Synthetic dataset, not real geographic evidence.
+- Simplified legal rules for pedagogical purposes.
+- Not a scientific, legal, or production classifier.
+- Legal fidelity could be improved in a future version with primary legal
+  sources and expert validation.
 
-## Estado de publicación
+## Publication Status
 
-- Repositorio esperado: `dellacroce-NRC/humedales-politica-comparada`
-- App en Streamlit Cloud: pendiente de despliegue
-- Uso previsto: portafolio profesional, LinkedIn y entrevistas
+- Repository: `dellacroce-NRC/humedales-politica-comparada`
+- Streamlit Cloud app: pending deployment
+- Intended use: professional portfolio, LinkedIn post, and interviews
