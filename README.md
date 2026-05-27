@@ -23,6 +23,9 @@ land parcels, and the level of error in field data. The point is not to build a
 decorative dashboard, but to show how institutional error changes when the rule
 changes.
 
+Live app:
+[humedales-politica-comparada-m4ttyhxjplxfr2zk6e75ai.streamlit.app](https://humedales-politica-comparada-m4ttyhxjplxfr2zk6e75ai.streamlit.app/)
+
 ![Simulation overview](docs/assets/app-overview.png)
 
 ![Comparison of simulated legal rules](docs/assets/app-comparacion-reglas.png)
@@ -174,6 +177,7 @@ humedales-politica-comparada/
 |-- data/
 |   `-- synthetic_wetlands.csv
 |-- docs/
+|   |-- GUIA_REPASO_ENTREVISTAS.md
 |   |-- GUIA_DEMO_ENTREVISTA.md
 |   |-- GUIA_EXPLICACION_LINKEDIN.md
 |   |-- deploy_log.md
@@ -232,5 +236,6 @@ python -m pytest tests -q -p no:cacheprovider
 ## Publication Status
 
 - Repository: `dellacroce-NRC/humedales-politica-comparada`
-- Streamlit Cloud app: pending deployment
+- Streamlit Cloud app:
+  `https://humedales-politica-comparada-m4ttyhxjplxfr2zk6e75ai.streamlit.app/`
 - Intended use: professional portfolio, LinkedIn post, and interviews

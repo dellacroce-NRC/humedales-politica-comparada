@@ -84,9 +84,9 @@ gh repo create humedales-politica-comparada --public --source=. --remote=origin 
 - Repository: `dellacroce-NRC/humedales-politica-comparada`
 - Branch: `main`
 - Main file path: `app.py`
-- App URL: pendiente
-- Fecha de despliegue: pendiente
-- Resultado: pendiente
+- App URL: `https://humedales-politica-comparada-m4ttyhxjplxfr2zk6e75ai.streamlit.app/`
+- Fecha de despliegue: 2026-05-27
+- Resultado: desplegada y verificada visualmente
 
 ## 7. Decisiones Tomadas
 
@@ -116,8 +116,8 @@ gh repo create humedales-politica-comparada --public --source=. --remote=origin 
 - Tipo de acción: sumar como repositorio público nuevo
 - Reemplazo de proyectos existentes: no aplica
 - Eliminación de proyectos existentes: no aplica
-- Confirmación manual en GitHub: pendiente
-- Fecha de publicación: pendiente
+- Confirmación manual en GitHub: completada
+- Fecha de publicación: 2026-05-27
 
 Nota: este proyecto no reemplaza ni elimina repositorios anteriores del
 portafolio. Se publica como una pieza adicional para mostrar el perfil híbrido

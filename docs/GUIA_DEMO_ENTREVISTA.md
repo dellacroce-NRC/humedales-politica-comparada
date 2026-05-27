@@ -1,5 +1,8 @@
 # Guía Para Explicar El Proyecto En Entrevistas
 
+> Para repasar el proyecto sin navegar todo el repositorio, usa primero
+> `docs/GUIA_REPASO_ENTREVISTAS.md`.
+
 Esta guía es para presentar el proyecto en vivo: abrir GitHub, navegar el
 repositorio, explicar la app y conectar el trabajo con tu perfil profesional.
 Está pensada para una entrevista, una conversación de portafolio o una revisión
@@ -71,7 +74,13 @@ Idea clave:
 
 ### 2. Mostrar la app desplegada o local
 
-Si la app está en Streamlit Cloud, abre la URL pública. Si no, puedes correr:
+App pública:
+
+```text
+https://humedales-politica-comparada-m4ttyhxjplxfr2zk6e75ai.streamlit.app/
+```
+
+Si quieres correrla localmente, puedes usar:
 
 ```powershell
 python -m streamlit run app.py
