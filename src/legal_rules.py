@@ -1,4 +1,7 @@
-"""Simplified legal decision rules for comparative policy analysis."""
+"""Simplified legal decision rules for comparative policy analysis.
+
+Source mapping and legal caveats are documented in docs/legal_sources/README.md.
+"""
 
 from __future__ import annotations
 
@@ -78,4 +81,3 @@ def prediction_column(rule_name: str) -> str:
 
     slug = re.sub(r"[^a-z0-9]+", "_", rule_name.lower()).strip("_")
     return f"pred_{slug}"
-

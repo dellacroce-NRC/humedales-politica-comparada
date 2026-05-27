@@ -42,6 +42,12 @@ type of error each institutional design is willing to tolerate.
 
 ## Three Comparative Rules
 
+The rules below are simplified classifiers derived from primary legal and
+institutional sources. The source mapping is documented in
+[docs/legal_sources/README.md](docs/legal_sources/README.md), including the
+important caveat that Colombia's `2 of 3` rule is a pedagogical abstraction of a
+multicriteria approach, not a literal statutory formula.
+
 | Case | Simulated rule | Institutional bias | Main risk |
 |---|---:|---|---|
 | Chile | 1 of 3 criteria | High sensitivity / high recall | False positives: over-protection |
@@ -171,6 +177,8 @@ humedales-politica-comparada/
 |   |-- GUIA_DEMO_ENTREVISTA.md
 |   |-- GUIA_EXPLICACION_LINKEDIN.md
 |   |-- deploy_log.md
+|   |-- legal_sources/
+|   |   `-- README.md
 |   `-- assets/
 |       |-- app-overview.png
 |       |-- app-comparacion-reglas.png
@@ -215,10 +223,11 @@ python -m pytest tests -q -p no:cacheprovider
 ## Limitations
 
 - Synthetic dataset, not real geographic evidence.
-- Simplified legal rules for pedagogical purposes.
+- Simplified legal rules for pedagogical purposes, with source mapping in
+  [docs/legal_sources/README.md](docs/legal_sources/README.md).
 - Not a scientific, legal, or production classifier.
-- Legal fidelity could be improved in a future version with primary legal
-  sources and expert validation.
+- Legal fidelity could still be improved with expert validation and richer
+  jurisdiction-specific modeling.
 
 ## Publication Status
 

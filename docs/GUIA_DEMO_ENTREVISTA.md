@@ -103,7 +103,32 @@ Frase útil:
 > Precision y recall dejan de ser métricas abstractas. Acá se vuelven decisiones
 > de política pública: qué error acepta el Estado y quién paga el costo.
 
-### 3. Abrir `src/legal_rules.py`
+### 3. Abrir `docs/legal_sources/README.md`
+
+Qué mostrar:
+
+- Matriz de fuentes primarias.
+- Ramsar como línea base internacional.
+- Chile anclado en Ley 21.202 y Decreto 15, artículo 8.
+- EE.UU. anclado en USACE/EPA.
+- Colombia como modelo pedagógico multicriterio, no regla literal.
+
+Qué decir:
+
+> Para subir el estándar del proyecto, dejé documentado de dónde viene cada
+> simplificación. Esto evita que la app parezca una opinión suelta: las reglas
+> son clasificadores pedagógicos inspirados en fuentes oficiales. Chile y EE.UU.
+> tienen una traducción más directa. Colombia la presento con más cuidado: no
+> digo que exista una regla legal exacta de 2 de 3, sino que la uso como modelo
+> intermedio inspirado en su enfoque multicriterio.
+
+Frase útil si alguien pregunta por rigor jurídico:
+
+> No estoy reemplazando una interpretación legal experta. Estoy mostrando cómo
+> ciertos criterios oficiales pueden traducirse a reglas comparables para
+> observar sus trade-offs.
+
+### 4. Abrir `src/legal_rules.py`
 
 Qué mostrar:
 
@@ -120,7 +145,7 @@ Qué decir:
 No profundizar demasiado en código. El objetivo no es demostrar sintaxis, sino
 mostrar que el diseño institucional fue convertido en una estructura evaluable.
 
-### 4. Abrir `src/metrics.py`
+### 5. Abrir `src/metrics.py`
 
 Qué mostrar:
 
@@ -139,7 +164,7 @@ Frase útil:
 > Es una traducción entre lenguajes: de derecho y política pública a ciencia de
 > datos.
 
-### 5. Abrir `src/data_generator.py`
+### 6. Abrir `src/data_generator.py`
 
 Qué mostrar:
 
@@ -159,7 +184,7 @@ Idea clave:
 > El proyecto no depende de datos reales porque es una simulación pedagógica. Eso
 > permite aislar el trade-off y comunicarlo mejor.
 
-### 6. Abrir `tests/test_policy_simulation.py`
+### 7. Abrir `tests/test_policy_simulation.py`
 
 Qué mostrar:
 
@@ -177,7 +202,7 @@ Frase útil:
 
 > No es solo una visualización bonita; hay una lógica validada detrás.
 
-### 7. Abrir `docs/GUIA_EXPLICACION_LINKEDIN.md`
+### 8. Abrir `docs/GUIA_EXPLICACION_LINKEDIN.md`
 
 Qué mostrar:
 
@@ -267,6 +292,17 @@ Respuesta:
 > El proyecto no busca declarar una regla ganadora. Busca mostrar que cada regla
 > acepta un tipo de error distinto. La mejor regla depende del costo social,
 > ambiental y jurídico que una institución esté dispuesta a asumir.
+
+### ¿Las reglas salen textual de la ley?
+
+Respuesta:
+
+> No exactamente. Están ancladas en fuentes primarias, pero son
+> simplificaciones comparativas. En Chile, el artículo 8 del reglamento permite
+> una traducción bastante directa a una lógica 1 de 3. En EE.UU., USACE/EPA
+> permite representar la lógica técnica como tres parámetros concurrentes. En
+> Colombia, la regla 2 de 3 es una abstracción pedagógica de un enfoque
+> multicriterio, no una fórmula legal literal.
 
 ### ¿Cuál fue el rol de la IA?
 
