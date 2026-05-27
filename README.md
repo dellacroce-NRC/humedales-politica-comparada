@@ -160,7 +160,7 @@ meaningful public policy and behavioral decision-making question.
 ## Repository Structure
 
 ```text
-Humedales_Politica_Comparada/
+humedales-politica-comparada/
 |-- app.py
 |-- README.md
 |-- requirements.txt
